@@ -15,6 +15,7 @@ public class Stylist {
     completed = false;
     createdAt = LocalDateTime.now();
   }
+  
 
   public String getDescription() {
     return description;
@@ -42,5 +43,15 @@ public class Stylist {
       return con.createQuery(sql).executeAndFetch(Stylist.class);
     }
   }
+
+  @Override
+public boolean equals(Object otherStylist) {
+  if (!(otherStylist instanceof Stylist)) {
+    return false;
+  } else {
+     Stylist newStylist = (Stylist) otherStylist;
+    return this.getDescription().equals(newStylist.getDescription());
+  }
+}
 
 }

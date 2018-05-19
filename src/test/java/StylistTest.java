@@ -18,7 +18,13 @@ public class StylistTest {
   }
   @Test
     public void stylist_instantiatesCorrectly_true() {
-        Stylist testStylist = new Stylist("Shampooist");
+        Stylist testStylist = new Stylist("Braider");
         assertEquals(true, testStylist instanceof Stylist);
     }
+    @Test
+public void equals_returnsTrueIfDescriptionsAretheSame() {
+  Stylist firstStylist = new Stylist("Braider");
+  Stylist secondStylist = new Stylist("Braider");
+  assertTrue(firstStylist.equals(secondStylist));
+}
 }
