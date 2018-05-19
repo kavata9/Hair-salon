@@ -27,4 +27,22 @@ public void equals_returnsTrueIfDescriptionsAretheSame() {
   Stylist secondStylist = new Stylist("Braider");
   assertTrue(firstStylist.equals(secondStylist));
 }
+
+@Test
+public void save_returnsTrueIfDescriptionsAretheSame() {
+  Stylist myStylist = new Stylist("Braider");
+  myStylist.save();
+  assertTrue(Stylist.all().get(0).equals(myStylist));
+}
+
+@Test
+  public void all_returnsAllInstancesOfStylist_true() {
+    Stylist firstStylist = new Stylist("Braider");
+    firstStylist.save();
+    Stylist secondStylist = new Stylist("Wash and style");
+    secondStylist.save();
+    assertEquals(true, Stylist.all().get(0).equals(firstStylist));
+    assertEquals(true, Stylist.all().get(1).equals(secondStylist));
+  }
+
 }

@@ -54,4 +54,13 @@ public boolean equals(Object otherStylist) {
   }
 }
 
+public void save() {
+  try(Connection con = DB.sql2o.open()) {
+    String sql = "INSERT INTO stylist (description) VALUES (:description)";
+    con.createQuery(sql)
+      .addParameter("description", this.description)
+      .executeUpdate();
+  }
+}
+
 }
