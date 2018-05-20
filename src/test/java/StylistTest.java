@@ -47,5 +47,20 @@ import org.sql2o.*;
         assertEquals(true, Stylist.all().get(0).equals(firstStylist));
         assertEquals(true, Stylist.all().get(1).equals(secondStylist));
       }
+
+      @Test
+      public void save_assignsIdToObject() {
+        Stylist myStylist = new Stylist("Breider");
+        myStylist.save();
+        Stylist savedStylist = Stylist.all().get(0);
+        assertEquals(myStylist.getId(), savedStylist.getId());
+      }
+
+      @Test
+     public void getId_stylistInstantiateWithAnId_1() {
+       Stylist testStylist = new Stylist("Breider");
+       testStylist.save();
+       assertTrue(testStylist.getId() > 0);
+     }
 }
         
