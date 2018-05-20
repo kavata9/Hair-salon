@@ -30,7 +30,7 @@
 **Set Up and Installation**
 1. Download the project folders
 > ```
->$ git clone https://github.com/kavata9/Hair-salon.git
+>$ git clone https://github.com/kavata9/Hair-salon
 >$ cd hairsalon
 >```
 2. Change postgres db login details
@@ -48,7 +48,7 @@
 ### Need help with deploying Spark java applications visit this [site](https://brianmarete.github.io/blog/java/spark/postgresql/heroku/2017/05/12/deploying-a-spark-java-app-with-a-postgresql-database-to-heroku.html)
 
 ### Author:
-#### [Agnes Musyoka](https://github.com/kavata9) 
+#### [Agnes Musyoka](https://github.com/kavata9/Hair-salon) 
 ### License
 **MIT License**
 
