@@ -62,5 +62,14 @@ import org.sql2o.*;
        testStylist.save();
        assertTrue(testStylist.getId() > 0);
      }
+
+     @Test
+     public void find_returnsStylistWithSameId_secondStylist() {
+       Stylist firstStylist = new Stylist("Breider");
+       firstStylist.save();
+       Stylist secondStylist = new Stylist("Wash and set");
+       secondStylist.save();
+       assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
+     }
 }
         
