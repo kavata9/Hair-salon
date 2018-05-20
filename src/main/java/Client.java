@@ -55,16 +55,16 @@ public class Client {
   }
 
   @Override
-  public boolean equals(Object otherClient){
-    if (!(otherClient instanceof Client)) {
-      return false;
-    } else {
-      Client newClient = (Client) otherClient;
-      return this.getDescription().equals(newClient.getDescription()) &&
-             this.getId() == newClient.getId() &&
-             this.getStylistId() == newClient.getStylistId();
-    }
-  }
+      public boolean equals(Object otherClient){
+        if (!(otherClient instanceof Client)) {
+          return false;
+        } else {
+          Client newClient = (Client) otherClient;
+          return this.getDescription().equals(newClient.getDescription()) &&
+                 this.getId() == newClient.getId() &&
+                 this.getStylistId() == newClient.getStylistId();
+        }
+      }
 
   public void save() {
     try(Connection con = DB.sql2o.open()) {
