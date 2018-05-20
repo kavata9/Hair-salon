@@ -30,5 +30,22 @@ import org.sql2o.*;
         Stylist secondStylist = new Stylist("Breider");
         assertTrue(firstStylist.equals(secondStylist));
       }
+
+      @Test
+      public void save_savesIntoDatabase_true() {
+        Stylist myStylist = new Stylist("Breider");
+        myStylist.save();
+        assertTrue(Stylist.all().get(0).equals(myStylist));
+      }
+
+      @Test
+      public void all_returnsAllInstancesOfStylist_true() {
+        Stylist firstStylist = new Stylist("Breider");
+        firstStylist.save();
+        Stylist secondStylist = new Stylist("Wash and set");
+        secondStylist.save();
+        assertEquals(true, Stylist.all().get(0).equals(firstStylist));
+        assertEquals(true, Stylist.all().get(1).equals(secondStylist));
+      }
 }
         
