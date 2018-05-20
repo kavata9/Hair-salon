@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "Hair-salon",
+                "projectName": "Hair-salon",
+                "workingDirectory": "/home/agnes/Documents/Core/Hair-salon",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "Hair-salon",
+                "projectName": "Hair-salon",
+                "workingDirectory": "/home/agnes/Documents/Core/Hair-salon",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
