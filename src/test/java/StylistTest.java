@@ -75,7 +75,7 @@ public class StylistTest {
     }
 
     @Test
-      public void getClient_retrievesALlClientFromDatabase_clientList() {
+      public void getClients_retrievesALlClientsFromDatabase_clientsList() {
         Stylist myStylist = new Stylist("Breider");
         myStylist.save();
         Client firstClient = new Client("Agnes", myStylist.getId());
