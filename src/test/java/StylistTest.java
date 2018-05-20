@@ -23,5 +23,12 @@ import org.sql2o.*;
         Stylist testStylist = new Stylist("Breider");
         assertEquals("Breider", testStylist.getName());
     }
+
+    @Test
+      public void equals_returnsTrueIfNamesAretheSame() {
+        Stylist firstStylist = new Stylist("Breider");
+        Stylist secondStylist = new Stylist("Breider");
+        assertTrue(firstStylist.equals(secondStylist));
+      }
 }
         
