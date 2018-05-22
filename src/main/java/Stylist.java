@@ -1,17 +1,16 @@
 import java.util.List;
-import org.sql2o.*;
-import java.util.List;
 import java.util.ArrayList;
+import org.sql2o.*;
 
 public class Stylist {
-  private String name;
-  private int id;
-  private String specialty;
+    private String name;
+    // private String speciality;
+    private int id;
 
-  public Stylist(String name, String specialty) {
-      this.name = name;
-      this.specialty = specialty;
-  }
+    public Stylist(String name) {
+        this.name = name;
+        // this.speciality =  speciality;
+    }
 
     public String getName() {
         return name;
@@ -28,44 +27,20 @@ public class Stylist {
         return id;
     }
 
-    public List<Client> getClients() {
-        try(Connection con = DB.sql2o.open()) {
-          String sql = "SELECT * FROM client where stylistId=:id";
-          return con.createQuery(sql)
-            .addParameter("id", this.id)
-            .executeAndFetch(Client.class);
-        }
-      }
+    // public List<Client> getClients() {
+    // }
 
-    public static Stylist find(int id) {
-        try(Connection con = DB.sql2o.open()) {
-          String sql = "SELECT * FROM stylist where id=:id";
-          Stylist stylist = con.createQuery(sql)
-            .addParameter("id", id)
-            .executeAndFetchFirst(Stylist.class);
-          return stylist;
-        }
-      }
+    // public static Stylist find(int id) {
+    // }
 
     @Override
-      public boolean equals(Object otherStylist) {
-        if (!(otherStylist instanceof Stylist)) {
-          return false;
-        } else {
-          Stylist newStylist = (Stylist) otherStylist;
-          return this.getName().equals(newStylist.getName()) &&
-                 this.getId() == newStylist.getId();
-        }
+    public boolean equals(Object otherStylist) {
+      if (!(otherStylist instanceof Stylist)) {
+        return false;
+      } else {
+        Stylist newStylist = (Stylist) otherStylist;
+        return this.getName().equals(newStylist.getName());
       }
-
-    public void save() {
-        try(Connection con = DB.sql2o.open()) {
-          String sql = "INSERT INTO stylist(name) VALUES (:name)";
-          this.id = (int) con.createQuery(sql, true)
-            .addParameter("name", this.name)
-            .executeUpdate()
-            .getKey();
-        }
-      }
+    }
 
 }
