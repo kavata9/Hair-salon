@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Stylist {
-    private String name;
-    private int id;
+  private String name;
+  private int id;
+  private String specialty;
 
-    public Stylist(String name) {
-        this.name = name;
-    }
+  public Stylist(String name, String specialty) {
+      this.name = name;
+      this.specialty = specialty;
+  }
 
     public String getName() {
         return name;

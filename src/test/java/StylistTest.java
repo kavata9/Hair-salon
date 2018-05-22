@@ -19,32 +19,25 @@ public class StylistTest {
             con.createQuery(deleteStylistQuery).executeUpdate();
         }
     }
-
-    @Test
-    public void getName_StylistInstantiatesWithName_Braider() {
-        Stylist testStylist = new Stylist("Breider");
-        assertEquals("Breider", testStylist.getName());
-    }
-
     @Test
     public void equals_returnsTrueIfNamesAretheSame() {
-        Stylist firstStylist = new Stylist("Breider");
-        Stylist secondStylist = new Stylist("Breider");
+        Stylist firstStylist = new Stylist("Agnes","Breider");
+        Stylist secondStylist = new Stylist("Agnes","Breider");
         assertTrue(firstStylist.equals(secondStylist));
     }
 
     @Test
     public void save_savesIntoDatabase_true() {
-        Stylist myStylist = new Stylist("Breider");
+        Stylist myStylist = new Stylist("Agnes","Breider");
         myStylist.save();
         assertTrue(Stylist.all().get(0).equals(myStylist));
     }
 
     @Test
     public void all_returnsAllInstancesOfStylist_true() {
-        Stylist firstStylist = new Stylist("Breider");
+        Stylist firstStylist = new Stylist("Agnes","Breider");
         firstStylist.save();
-        Stylist secondStylist = new Stylist("Wash and set");
+        Stylist secondStylist = new Stylist("Fatuma","Wash and set");
         secondStylist.save();
         assertEquals(true, Stylist.all().get(0).equals(firstStylist));
         assertEquals(true, Stylist.all().get(1).equals(secondStylist));
@@ -52,7 +45,7 @@ public class StylistTest {
 
     @Test
     public void save_assignsIdToObject() {
-        Stylist myStylist = new Stylist("Breider");
+        Stylist myStylist = new Stylist("Agnes","Breider");
         myStylist.save();
         Stylist savedStylist = Stylist.all().get(0);
         assertEquals(myStylist.getId(), savedStylist.getId());
@@ -60,23 +53,23 @@ public class StylistTest {
 
     @Test
     public void getId_stylistInstantiateWithAnId_1() {
-        Stylist testStylist = new Stylist("Breider");
+        Stylist testStylist = new Stylist("Agnes","Breider");
         testStylist.save();
         assertTrue(testStylist.getId() > 0);
     }
 
     @Test
     public void find_returnsStylistWithSameId_secondStylist() {
-        Stylist firstStylist = new Stylist("Breider");
+        Stylist firstStylist = new Stylist("Agnes","Breider");
         firstStylist.save();
-        Stylist secondStylist = new Stylist("Wash and set");
+        Stylist secondStylist = new Stylist("Fatuma","Wash and set");
         secondStylist.save();
         assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
     }
 
     @Test
       public void getClients_retrievesALlClientsFromDatabase_clientsList() {
-        Stylist myStylist = new Stylist("Breider");
+        Stylist myStylist = new Stylist("Agnes","Breider");
         myStylist.save();
         Client firstClient = new Client("Agnes", myStylist.getId());
         firstClient.save();

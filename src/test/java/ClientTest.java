@@ -1,4 +1,3 @@
-import com.sun.security.ntlm.Client;
 import org.sql2o.*;
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -75,7 +74,7 @@ public class ClientTest {
 
   @Test
   public void save_savesStylistIdIntoDB_true() {
-    Stylist myStylist = new Stylist("Breider");
+    Stylist myStylist = new Stylist("Agnes","Breider");
     myStylist.save();
     Client myClient = new Client("Agnes", myStylist.getId());
     myClient.save();
@@ -84,11 +83,11 @@ public class ClientTest {
   }
 
   @Test
-  public void delete_deletesClient_true() {
-    Client myClient = new Client("Agnes", 1);
-    myClient.save();
-    int myClientId = myClient.getId();
-    myClientId.delete();
-    assertEquals(null, Client.find(myClientId));
-  }
+public void delete_deletesTask_true() {
+  Client myClient = new Client("Agnes", 1);
+  myClient.save();
+  int myClientId = myClient.getId();
+  myClient.delete();
+  assertEquals(null, Client.find(myClientId));
+}
 }
