@@ -8,14 +8,14 @@ import org.sql2o.*;
 public class Client {
   private String description;
   private boolean completed;
-  private LocalDateTime createdAt;
+  // private LocalDateTime createdAt;
   private int id;
   private int stylistId;
 
   public Client(String description, int stylistId) {
     this.description = description;
     completed = false;
-    createdAt = LocalDateTime.now();
+    // createdAt = LocalDateTime.now();
     this.stylistId = stylistId;
   }
 
@@ -27,9 +27,9 @@ public class Client {
     return completed;
   }
 
-  public LocalDateTime getCreatedAt() {
-    return createdAt;
-  }
+  // public LocalDateTime getCreatedAt() {
+  //   return createdAt;
+  // }
 
   public int getId() {
     return id;

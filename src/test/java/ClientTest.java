@@ -25,14 +25,14 @@ public class ClientTest {
   }
 
   @Test
-  public void equals_returnsTrueIfDescriptionsAretheSame() {
+  public void equals_returnsTrueIfNamesAretheSame() {
     Client firstClient = new Client("Agnes", 1);
     Client secondClient = new Client("Agnes", 1);
     assertTrue(firstClient.equals(secondClient));
   }
 
   @Test
-  public void save_returnsTrueIfDescriptionsAretheSame() {
+  public void save_returnsTrueIfNamesAretheSame() {
     Client myClient = new Client("Agnes", 1);
     myClient.save();
     assertTrue(Client.all().get(0).equals(myClient));
