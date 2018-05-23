@@ -7,7 +7,7 @@ public class Client {
   private int id;
   private int stylistId;
 
-  public Client(String name, int categoryId) {
+  public Client(String name, int stylistId) {
     this.name = name;
     this.stylistId = stylistId;
   }
@@ -63,4 +63,24 @@ public class Client {
       return client;
     }
   }
+
+  public void update(String name) {
+    try(Connection con = DB.sql2o.open()) {
+    String sql = "UPDATE client SET name = :name WHERE id = :id";
+    con.createQuery(sql)
+      .addParameter("name", name)
+      .addParameter("id", id)
+      .executeUpdate();
+    }
+  }
+
+  public void delete() {
+    try(Connection con = DB.sql2o.open()) {
+    String sql = "DELETE FROM client WHERE id = :id;";
+    con.createQuery(sql)
+      .addParameter("id", id)
+      .executeUpdate();
+    }
+  }
+
 }
