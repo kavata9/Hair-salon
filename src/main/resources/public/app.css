@@ -1,0 +1,37 @@
+body {
+    background-image: url(../images/BRISBANE3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;    
+}
+ul {
+    list-style-type: none; 
+}
+
+.navbar {
+    background: #070000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #070000, #4C0001, #070000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #070000, #4C0001, #070000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+
+.page-header, .stylist {
+    text-align: center;
+}
+.stylist, .success, .list, .client-form, .style, .success {
+    margin-top: 35px;
+}
+
+.index{
+    height: 650px;
+    /* background-image: url(http://i.imgur.com/PIUY2g6.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-attachment: fixed; */
+}
+
+.navbar-nav {
+    text-align: center;
+    color: white;
+}
