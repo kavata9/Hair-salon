@@ -72,12 +72,12 @@ public class ClientTest {
   public void save_assignsIdToObject() {
     Client myClient = new Client("Agnes", 1);
     myClient.save();
-    Client savedClient = Client.all().get(0);
+    Client savedClient = Client.all().get();
     assertEquals(myClient.getId(), savedClient.getId());
   }
 
   @Test
-  public void save_savesStylistIdIntoDB_true() {
+  public void save_saveStylistIdIntoDB_true() {
     Stylist myStylist = new Stylist("Agnes");
     myStylist.save();
     Client myClient = new Client("Agnes", myStylist.getId());
