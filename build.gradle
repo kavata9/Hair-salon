@@ -8,7 +8,7 @@ dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.21' 
     compile 'com.sparkjava:spark-template-velocity:2.5.5' 
     compile 'org.sql2o:sql2o:1.5.4' 
-    compile 'org.postgresql:postgresql:9.4–1201-jdbc41'
+    compile 'org.postgresql:postgresql:9.4-1201-jdbc41'
     testCompile 'junit:junit:4.12' 
 }
 // test { 
