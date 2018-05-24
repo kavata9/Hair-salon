@@ -1,16 +1,16 @@
-<h1>$client.getName()</h1>
-<h2> Belongs to: $stylist.getName() list.</h2>
+<h1 class="text-center">$stylist.getName() client details:</h1>
+<h2>NAME:$client.getName()</h2>
 
-<h2>Edit client:</h2>
-
-<form action="/stylists/$client.getStylistId()/clients/$client.getId()" method="post">
-  <label for="name">Name</label>
-  <input id="name" name="name" type="text">
-  <button type="submit" class="btn btn-info">Update Client</button>
+<h2 class="text-center">EDIT CLIENT</h2>
+<div class="row well">
+<form action="/stylist/$client.getStylistId()/clients/$client.getId()" method="post">
+<div class="form-group">
+<label for="name">ENTER CLIENT NAME</label>
+<input id="name" name="name" type="text" class="form-control">
+</div>
+<button type="submit" class="btn btn-success">EDIT CLIENT</button>
 </form>
-
-<form action="/stylists/$client.getStylistId()/clients/$client.getId()/delete" method="post">
-  <button type="submit" class="btn btn-danger" id="delete-client">Delete Client</button>
+</div>
+<form action="/stylist/$client.getStylistId()/clients/$client.getId()/delete" method="post">
+<button type="submit" class="btn btn-danger" id="delete-task">Delete Client</button>
 </form>
-
-<a href="/stylists/$stylist.getId()">Return to $stylist.getName()</a>

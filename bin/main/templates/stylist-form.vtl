@@ -1,9 +1,14 @@
-<h1>Add a stylist</h1>
+<div class="row well client">
+<h1 class="text-center">ADD A NEW STYLIST</h1>
 
-<p>Add a stylist here:</p>
+<div class="col-md-6 well">
+<form action="/stylist" method="post">
+<div class="form-group">
+<label for="name">ENTER THE NAME</label>
+<input id="name" name="name" type="text" class="form-control"/>
 
-<form action="/stylists" method="post">
-  <label for="name">Stylist name</label>
-  <input id="name" name="name" type="text">
-  <button type="submit" class="btn btn-success">Add Stylist</button>
+</div>
+<button type="submit" class="btn btn-success">ADD STYLIST</button>
 </form>
+</div>
+</div>

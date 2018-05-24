@@ -20,18 +20,15 @@ ul {
 }
 .stylist, .success, .list, .client-form, .style, .success {
     margin-top: 35px;
+    color: #4C0001;
 }
 
 .index{
     height: 650px;
-    /* background-image: url(http://i.imgur.com/PIUY2g6.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-attachment: fixed; */
+
 }
 
 .navbar-nav {
     text-align: center;
-    color: white;
+    color: purple;
 }

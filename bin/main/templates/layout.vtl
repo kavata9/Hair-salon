@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>West End Salon</title>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel='stylesheet' href='/app.css'>
-    <link rel="shortcut icon" href="https://i.imgur.com/1Ji8zvh.png">
 
-  </head>
-  <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" style="color:white;" href="/">Hair salon</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a style="color:white;" class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" style="color:white;" href="/stylists">Stylists</a>
-    </div>
-  </div>
-</nav>
-    <div class="container-fluid">
-      #parse( $template )
-    </div>
-  </body>
+<head>
+  <title>SALON</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='/app.css'>
+  <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">SALON</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/stylist/new">ADD STYLIST</a></li>
+          <li><a href="/stylist">VIEW LISTED STYLIST</a></li>
+        </ul>
+      </div>
+    </nav>
+    #parse( $template )
+    <div class="row well">
+      <div class="col-md-4">
+        <h3 class="text-center"><a href="/">HOME</a></h3>
+        <h3 class="text-center"><a href="/stylist/new">ADD STYLIST</a></h3>
+        <h3 class="text-center"><a href="/stylist">VIEW LISTED STYLISTS</a></h3>
+      </div>
+      <div class="col-md-4">
+        <h3 class="text-center">SALON</h3>
+        <h3 class="text-center">MAKE YOUR CHOICE :-)</h3>
+      </div>
+</body>
+
 </html>
